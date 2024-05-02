@@ -1,0 +1,16 @@
+{
+  "name": "color-picker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@fast-check/vitest": "^0.1.1",
+    "vitest": "^1.5.3"
+  }
+}
