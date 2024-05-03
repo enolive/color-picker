@@ -4,11 +4,15 @@ export type Color = {
 }
 
 function hashCode(s: string) {
-  let h = 0, l = s.length, i = 0
-  if (l > 0)
-    while (i < l)
-      h = (h << 5) - h + s.charCodeAt(i++) | 0
-  return h
+  let hash = 0,
+    i, chr
+  if (s.length === 0) return hash
+  for (i = 0; i < s.length; i++) {
+    chr = s.charCodeAt(i)
+    hash = ((hash << 5) - hash) + chr
+    hash |= 0 // Convert to 32bit integer
+  }
+  return hash
 }
 
 function mod(a: number, b: number) {
